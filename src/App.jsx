@@ -1,10 +1,13 @@
 import { useState } from 'react'
+import Header from './components/Header'
+import NewBudget from './components/NewBudget'
 
 function App() {
 
   return (
     <div>
-      <h1>Control de Gastos</h1>
+      <Header />
+      <h4>CreateBy:Ing.Boris Monroy G.</h4>
     </div>
   )
 }
