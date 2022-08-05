@@ -4,10 +4,15 @@ import NewBudget from './components/NewBudget'
 
 function App() {
 
+  const [presupuesto, setPresupuesto] = useState(0)
+
   return (
     <div>
-      <Header />
-      <h4>CreateBy:Ing.Boris Monroy G.</h4>
+      <Header
+        presupuesto={presupuesto}
+        setPresupuesto={setPresupuesto}
+      />
+      
     </div>
   )
 }
