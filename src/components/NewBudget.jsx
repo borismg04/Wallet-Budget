@@ -8,8 +8,12 @@ const NewBudget = ({presupuesto,setPresupuesto}) => {
   const handlePresupuesto = (e) => {
     e.preventDefault()
     if(!Number(presupuesto) || Number(presupuesto) < 0){
+      console.log("🚀 ~ file: NewBudget.jsx ~ line 11 ~ handlePresupuesto ~ presupuesto", presupuesto)
       setMensaje('No es un presupuesto valido')
       console.log(mensaje);
+      console.log(presupuesto);
+      console.log(Number(presupuesto));
+      
       return
     }
     setMensaje('')
