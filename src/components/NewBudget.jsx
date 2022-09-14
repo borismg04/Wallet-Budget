@@ -8,7 +8,6 @@ const NewBudget = ({presupuesto,setPresupuesto}) => {
   const handlePresupuesto = (e) => {
     e.preventDefault()
     if(!Number(presupuesto) || Number(presupuesto) < 0){
-      console.log("🚀 ~ file: NewBudget.jsx ~ line 11 ~ handlePresupuesto ~ presupuesto", presupuesto)
       setMensaje('No es un presupuesto valido')
       return
     }
@@ -37,7 +36,6 @@ const NewBudget = ({presupuesto,setPresupuesto}) => {
         {mensaje && <Message tipo='error'>{mensaje}</Message>}
 
       <h4>CreatedBy: Ing.Boris Monroy G.</h4>
-      <h1>Camilo gil</h1>
       </form>
     </div>
   )
