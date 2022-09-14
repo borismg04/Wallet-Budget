@@ -6,13 +6,13 @@ const NewBudget = ({presupuesto,setPresupuesto}) => {
   const [mensaje, setMensaje] = useState('')
 
   const handlePresupuesto = (e) => {
-    setPresupuesto(e.target.value)
     e.preventDefault()
     if(!Number(presupuesto) || Number(presupuesto) < 0){
       setMensaje('No es un presupuesto valido')
-    }else{
-      console.log('Si es un presupuesto valido')
-    } 
+      console.log(mensaje);
+      return
+    }
+    setMensaje('')
   }
 
   return (
@@ -25,7 +25,7 @@ const NewBudget = ({presupuesto,setPresupuesto}) => {
             type='text' 
             placeholder='Añade tu Presupuesto'
             value={presupuesto}
-            onChange={e => setPresupuesto(e.target.value)}
+            onChange={e => setPresupuesto(Number(e.target.value))}
           />  
         </div>
 
