@@ -36,7 +36,7 @@ const NewBudget = ({presupuesto,setPresupuesto}) => {
 
         {mensaje && <Message tipo='error'>{mensaje}</Message>}
 
-      <h4>CreateBy:Ing.Boris Monroy G.</h4>
+      <h4>CreatedBy: Ing.Boris Monroy G.</h4>
       </form>
     </div>
   )
