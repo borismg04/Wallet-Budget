@@ -69,7 +69,7 @@ const Modal = ({
         </div>
 
         <div className="campo">
-          <label htmlFor="cantidad">Cantidad</label>
+          <label htmlFor="cantidad">Cantidad 💲</label>
           <input
             type="number"
             id="cantidad"
