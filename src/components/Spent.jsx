@@ -35,7 +35,7 @@ const Spent = ({gasto,setGastoEditar,eliminarGasto}) => {
     <LeadingActions>
       <SwipeAction 
         onClick={() => setGastoEditar(gasto)}
-        destructive={true}
+        destructive={false}
       >
         Editar
       </SwipeAction>
