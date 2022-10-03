@@ -7,15 +7,16 @@ const Modal = ({
   animarModal,
   setAnimarModal,
   guardarGasto,
-  gastoEditar
+  gastoEditar,
+  setGastoEditar
 }) => {
 
   const [mensaje, setMensaje] = useState('')
   const [nombre, setNombre] = useState('');
   const [cantidad, setCantidad] = useState('');
   const [categoria , setCategoria] = useState('');
-  const [fecha , setFecha] = useState('');
   const [id, setId] = useState('');
+  const [fecha , setFecha] = useState('');
 
   useEffect(() => {
     if(Object.keys(gastoEditar).length > 0){
@@ -30,6 +31,7 @@ const Modal = ({
 
   const ocultarModal = () => {
     setAnimarModal(false);
+    setGastoEditar({});
 
     setTimeout(() => {
       setModal(false);

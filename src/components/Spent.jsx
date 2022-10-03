@@ -27,13 +27,16 @@ const diccionarioIconos ={
   suscripciones : IconoSuscripciones
 };
 
-const Spent = ({gasto,setGastoEditar}) => {
+const Spent = ({gasto,setGastoEditar,eliminarGasto}) => {
 
   const {categoria,nombre,cantidad,id,fecha}= gasto;
 
   const leadingActions = () => (
     <LeadingActions>
-      <SwipeAction onClick={() => setGastoEditar(gasto)}>
+      <SwipeAction 
+        onClick={() => setGastoEditar(gasto)}
+        destructive={false}
+      >
         Editar
       </SwipeAction>
     </LeadingActions>
@@ -41,7 +44,7 @@ const Spent = ({gasto,setGastoEditar}) => {
 
   const trailingActions = () => (
     <TrailingActions>
-      <SwipeAction onClick={() => console.log('Eliminar')}>
+      <SwipeAction onClick={() => eliminarGasto(id)}>
         Eliminar
       </SwipeAction>
     </TrailingActions>
